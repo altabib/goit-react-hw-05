@@ -18,7 +18,7 @@ const HomePage = () => {
             setLoading(true)
             setMovies([])
             try {
-                setLoading(true);
+                
                 const response = await trendingMovie();
                 if (!response) throw new Error(error.message)
                 setMovies(response)
@@ -35,12 +35,14 @@ const HomePage = () => {
        },[error]
     )
     return (
-    <div>
+        <main>
+            <div>
             <h1>List of the most popular films for today</h1>
             {loading && <Loader />}
             {error && <ErrorMessage error={error}/>}
-            <MovieList movies={movies}/>
-    </div>
+            {movies && movies.length > 0 && <MovieList movies={movies} />}
+            </div>
+        </main>
 )
 }
 
