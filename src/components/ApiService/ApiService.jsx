@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 
@@ -12,7 +12,7 @@ headers: {
 
 const trendingMovie = async () => {
   const response = await axios.get("trending/movie/day", options);
-  return response.data;
+  return response.data.results;
 };
 
 async function queryMovie(query) {
