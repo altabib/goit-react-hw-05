@@ -32,7 +32,7 @@ const HomePage = () => {
              }
       }
         fetchTrendMovies()
-       },[error]
+       }, [error]
     )
     return (
         <main>

@@ -3,7 +3,7 @@ import dateFormat from "dateformat";
 
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { reviewsMovie } from "../../api-service";
+import { reviewsMovie } from "../../components/ApiService/ApiService";
 
 import toast from "react-hot-toast";
 import Loader from "../Loader/Loader";

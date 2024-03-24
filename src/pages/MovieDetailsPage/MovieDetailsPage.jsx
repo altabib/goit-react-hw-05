@@ -1,15 +1,15 @@
 import toast from "react-hot-toast"
-import css from './MovieDetailsPage.module.css'
+import css from "./MovieDetailsPage.module.css"
 import clsx from "clsx";
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react"
 import { Link, NavLink, Route, Routes, useLocation, useParams } from "react-router-dom"
-import { detailsMovie } from "../../api-service"
+import { detailsMovie } from "../../components/ApiService/ApiService"
 
 const Loader = lazy(() => import('../../components/Loader/Loader'))
 const ErrorMessage = lazy(() => import('../../components/ErrorMessage/ErrorMessage'))
 const MovieCast = lazy(() => import('../../components/MovieCast/MovieCast'))
-const MovieReviews = lazy(() => import('../../components/ApiService/ApiService'))
+const MovieReviews = lazy(() => import('../../components/MovieReviews/MovieReviews'))
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
