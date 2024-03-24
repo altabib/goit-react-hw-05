@@ -16,7 +16,7 @@ const trendingMovie = async () => {
 };
 
 async function queryMovie(query) {
-  const response = await axios.get(`search/movie?include_adult=false&page=1=${query}`, options);
+  const response = await axios.get(`search/movie?include_adult=false&page=1&query=${query}`, options);
   return response.data.results;
 }
 
@@ -32,7 +32,7 @@ const creditsMovie = async (movieId) => {
 
 const reviewsMovie = async (movieId) => {
   const response = await axios.get(`movie/${movieId}/reviews`, options);
-  return response.data;
+  return response.data.results;
 };
 
 export {

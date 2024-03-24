@@ -3,8 +3,8 @@ import css from "./Navigation.module.css"
 
 const Navigation = () => {
     return (
-        <header>
-            <nav>
+        <header className={css.navHeader}>
+            <nav className={css.navigation}>
                 <NavLink to="/" className={css.Home}>
                     Home
                 </NavLink>

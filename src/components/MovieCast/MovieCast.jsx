@@ -7,7 +7,7 @@ import { creditsMovie } from "../ApiService/ApiService";
 import toast from "react-hot-toast";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
-// import nophoto from '../../assets/img/nophoto.jpg'
+import nophoto from "../../assets/img/nophoto.jpg"
 
 const MovieCast = () => {
   const [cast, setCast] = useState(null);

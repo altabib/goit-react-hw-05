@@ -1,0 +1,25 @@
+.navHeader {
+    padding: 20px;
+}
+
+.navigation{
+    color: black;
+    font-size: 34px;
+    padding: 0px 20px;
+   
+}
+
+.Home{
+color: black;
+font-weight: 700;
+list-style: none;
+margin-right: 30px;
+border-bottom: none;
+}
+
+
+.Movies{
+color: black;
+font-weight: 700;
+list-style: none;
+}

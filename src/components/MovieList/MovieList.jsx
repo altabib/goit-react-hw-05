@@ -5,7 +5,7 @@ import MovieItem from "../../components/MovieItem/MovieItem";
 export default function MovieList ({movies}){
     const location = useLocation();
     return (
-         <div>
+         <>
                {Array.isArray(movies) && movies.length > 0 && (
                    <ul className={css.moviesBox}>
                     {movies.map((movie) => (
@@ -21,7 +21,7 @@ export default function MovieList ({movies}){
           ))}
             </ul>
       )};
-        </div>
+        </>
     )
    
 }

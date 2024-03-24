@@ -21,8 +21,8 @@ const MovieReviews = () => {
       setLoading(true)
       setError(false)
       try {
-        const res = await reviewsMovie(movieId)
-        setReviews(res)
+        const response = await reviewsMovie(movieId)
+        setReviews(response)
       } catch (error) {
         setError(error.message)
         toast.error("Something went wrong")

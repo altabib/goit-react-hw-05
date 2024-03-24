@@ -1,35 +1,33 @@
-import css from "./SearchForm.module.css";
-import { Formik, Form, Field } from "formik";
-import toast from 'react-hot-toast';
-
-
+import toast from 'react-hot-toast'
+import css from './SearchForm.module.css'
 
 const SearchForm = ({ onSearch }) => {
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const form = event.target
+        const query = form.elements.query.value.trim()
 
-  const handleSubmit = (values, actions) => {
-    if (!values.query.trim()) {
-      return toast.error("Enter search text");
+        if(!query) {
+            toast.error("Enter your search details", {position:'top-center'})
+        }
+
+        onSearch(query)
+        form.reset()
     }
-      onSearch(values.query);
-      actions.resetForm();
-  };
+
   return (
-    <div className={css.searchForm}>
-      <Formik initialValues={{ query: "" }} onSubmit={handleSubmit}>
-        <Form className={css.form}>
-          <Field
-            className={css.input}
+    <>
+        <form onSubmit={handleSubmit} className={css.form}>
+            <input 
             type="text"
-            name="query"
-            placeholder="Search movie"
-          ></Field>
-          <button className={css.btnSearch} type="submit">
-            Search
-          </button>
-        </Form>
-      </Formik>
-    </div>
-  );
-};
+            name='query'
+            placeholder='search movie'
+            className={css.input}
+            />
+            <button className={css.searchBtn} type='submit'>Search</button>
+        </form>
+    </>
+  )
+}
 
 export default SearchForm

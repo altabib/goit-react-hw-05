@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast'
 
 const MovieList = lazy(() => import('../../components/MovieList/MovieList'))
 const Loader = lazy(() => import('../../components/Loader/Loader'))
-const SearchForm = lazy(() => import('../../components/SearchForm/SearchForm'))
+const SearchForm = lazy(() => import("../../components/SearchForm/SearchForm"))
 const ErrorMessage = lazy(() => import('../../components/ErrorMessage/ErrorMessage'))
 
 
@@ -25,8 +25,8 @@ const MoviesPage = () => {
       setError(null)
       setMovies([])
       try {
-        const res = await queryMovie(query)
-        setMovies(res)
+        const response = await queryMovie(query)
+        setMovies(response)
       } catch (error) {
         setError(error.message)
         toast.error("Something went wrong")
