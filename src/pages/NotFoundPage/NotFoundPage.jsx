@@ -1,4 +1,3 @@
-import css from './NotFoundPage.module.css'
 import { useRef } from 'react';
 import { Link, useLocation } from "react-router-dom";
 

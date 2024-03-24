@@ -46,7 +46,7 @@ const MovieCast = () => {
                       <span>Known as:{" "}</span>
                       <p>{actor.character}</p>
                     </li>
-                  );
+                  )
                 })
                 }
     </>

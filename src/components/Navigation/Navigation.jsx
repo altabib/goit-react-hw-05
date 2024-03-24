@@ -14,7 +14,7 @@ const Navigation = () => {
                 </NavLink>
             </nav>
         </header>
-    );
+    )
 }
 
 export default Navigation

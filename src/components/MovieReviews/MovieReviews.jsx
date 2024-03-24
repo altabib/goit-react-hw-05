@@ -47,7 +47,7 @@ const MovieReviews = () => {
                         <p className={css.reviewUpdated}>Updated{": "}{dateFormat(`${review.updated_at}`, "mmmm dS, yyyy (hh:mm:ss)")}</p>
                       </div>
                     </div>
-                  );
+                  )
                 })
                 }
     </>

@@ -20,7 +20,7 @@ export default function MovieList ({movies}){
             </li>
           ))}
             </ul>
-      )};
+      )}
         </>
     )
    
