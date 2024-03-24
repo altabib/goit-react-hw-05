@@ -12,7 +12,7 @@ headers: {
 
 const trendingMovie = async () => {
   const response = await axios.get("trending/movie/day", options);
-  return response;
+  return response.data;
 };
 
 async function queryMovie(query) {
